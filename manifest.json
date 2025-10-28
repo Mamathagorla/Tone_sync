@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "ToneSync AI",
+  "version": "3.0",
+  "description": "AI tone detector and rewriter with dynamic personalized suggestions using Gemini Nano.",
+
+  "permissions": ["storage", "scripting", "activeTab"],
+  "optional_permissions": ["microphone"],
+  "host_permissions": ["<all_urls>"],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
