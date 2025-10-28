@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ToneSync AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>ToneSync AI</h2>
+
+  <textarea id="userText" placeholder="Type or speak something..."></textarea>
+
+  <div class="buttons">
+    <button id="speakBtn">🎤 Speak</button>
+    <button id="detectToneBtn">🔍 Detect Tone</button>
+  </div>
+
+  <div id="toneDetection"></div>
+  <div id="suggestions"></div>
+
+  <button id="rewriteBtn" style="display:none;">✏️ Rewrite</button>
+
+  <div id="result"></div>
+  <div class="footer">Checking connection...</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
